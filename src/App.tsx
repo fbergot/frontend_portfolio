@@ -1,14 +1,20 @@
 import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import './App.css';
-import Header from './components/header/Header/Header';
-import Nav from './components/header/Nav/Nav';
+import APropos from './components/page/aPropos/aPropos';
+import Home from './components/page/home/Home';
+import Projets from './components/page/projets/Projets';
 
 function App() {
-    const nav = <Nav namesOfLinks={["acceuil", "projets"]}/>
     return (
-        <div className="App">
-          <Header nav={nav}/>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="projets" element={<Projets/>} />
+                <Route path="aPropos" element={<APropos/>} />
+                <Route path="*" element={<Home/>} />
+            </Routes>
+        </Router>
     );
 }
 
