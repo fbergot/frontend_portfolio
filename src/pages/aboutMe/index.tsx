@@ -1,7 +1,7 @@
-const APropos = () => {
+const AboutMe = () => {
     return <>
         <h1>à propos</h1>
     </>
 }
 
-export default APropos;
+export default AboutMe;

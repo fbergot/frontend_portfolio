@@ -1,10 +1,8 @@
-type HeaderProps = {
-    nav: JSX.Element;
-}
+import Nav from '../Navigation/Nav';
 
-const Header = ({ nav }: HeaderProps) => {
+const Header = () => {
     return <header>
-        {nav}
+        <Nav namesOfLinks={["Home", "Projets", "A propos"]} routes={["/", "/projects", "/aboutMe"]}/>
     </header>
 }
 
