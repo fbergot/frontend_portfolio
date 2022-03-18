@@ -3,7 +3,7 @@
 @import "../../assets/scss/mixins/button";
 
 .container-button {
-   margin-top: 1.2rem;
+   margin-top: 1.7rem;
    display: flex;
 }
 
@@ -11,10 +11,14 @@
    text-decoration: none;
 }
 
+.first {
+   margin-right: 1rem;
+}
+
 .button-colored {
    @include button(#fff, $SECONDARY);
 }
 
 .button {
-   @include button(#000, none);
+   @include button(#000, "none");
 }

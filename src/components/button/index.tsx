@@ -2,7 +2,7 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 
 type ButtonProps = {
-   classButton?: string;
+   classButton: string;
    children: string;
    triggerFromParent?: () => void;
 };

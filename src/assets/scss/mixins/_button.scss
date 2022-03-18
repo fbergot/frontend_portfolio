@@ -1,7 +1,9 @@
 @mixin button($colorText, $colorBackground) {
-   @if $colorBackground {
+   @if ($colorBackground == "none") {
       border: 1px solid black;
       cursor: pointer;
+   } @else {
+      border: none;
    }
    height: 40px;
    border-radius: 2rem;

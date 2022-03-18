@@ -11,6 +11,7 @@ const AboutMe = () => {
    return (
       <main>
          <div className="wrapper-sections">
+            {/* left section */}
             <section>
                <div className="card-presentation">
                   <img src={Me} alt="florian bergot" />
@@ -20,6 +21,7 @@ const AboutMe = () => {
                   <div className="social"></div>
                </div>
             </section>
+            {/* right section */}
             <section>
                <div className="presentation">
                   <p>Hello !</p>
@@ -29,12 +31,24 @@ const AboutMe = () => {
                      <span>{String.fromCodePoint(0x1f9d0)}</span>
                   </p>
                   <div className="container-button">
-                     <Button classButton="button-colored">Voir les projets</Button>
-                     <Button triggerFromParent={toggleDisplayJourney} classButton="button">
+                     <Button
+                        triggerFromParent={toggleDisplayJourney}
+                        classButton="button first"
+                     >
                         Mon parcours
                      </Button>
+                     <Button classButton="button-colored">Voir les projets</Button>
                   </div>
-                  {displayJourney && <p>Ma vie ici ....</p>}
+                  {displayJourney && (
+                     <p className="p-journey">
+                        J'ai créé mes premiers codes en octobre 2019, et cela a été une
+                        véritable rencontre. J'ai tout de suite su que je voudrais en faire mon
+                        métier. Super, joindre l'utile à l'agréable !! J'ai donc étudié en
+                        autodidacte pendant un an et demi avant de passer un diplôme de dev web
+                        avec Openclassrooms. J'ai eu ce dernier avec les félicitations du jury
+                        en janvier 2022 {String.fromCodePoint(0x1f44c)}
+                     </p>
+                  )}
                </div>
             </section>
          </div>
