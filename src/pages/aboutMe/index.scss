@@ -1,6 +1,8 @@
 @import "../../assets/scss/variables/colors";
 @import "../../assets/scss/variables/fonts";
 
+@import "../../assets/scss/keyframes/appearance";
+
 .wrapper-sections {
    position: absolute;
    top: 120px;
@@ -69,20 +71,39 @@
       height: 45px;
       position: absolute;
       bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      a {
+         text-decoration: none;
+         color: #000;
+         font-size: 1.5rem;
+         transition: all 0.3s;
+         margin-top: 0.3rem;
+
+         &:hover {
+            color: $SECONDARY;
+         }
+      }
+      a:nth-child(2) {
+         font-size: 1.65rem;
+      }
    }
 }
 
 .presentation {
    position: relative;
-   border: 1px solid red;
-   width: 60%;
+   // border: 1px solid red;
+   width: 40%;
+   max-width: 380px;
    top: 20%;
    left: 100px;
 
    p:nth-child(1) {
-      font-size: 100px;
+      font-size: 5em;
       font-family: $POPPINS;
-      font-weight: 500;
+      font-weight: 400;
    }
 
    p:nth-child(2) {
@@ -91,17 +112,51 @@
 
    p:nth-child(2),
    p:nth-child(3) {
+      color: rgb(123, 122, 122);
       font-family: $LATO;
       font-size: 25px;
    }
-
-   span {
-      margin-left: 0.2rem;
-      font-size: 20px;
+   p:nth-child(3) {
+      line-height: 3rem;
    }
+}
 
-   .p-journey {
-      margin-top: 1.7rem;
-      font-size: 17px;
+.emoji-glasses {
+   margin-left: 0.3rem;
+   font-size: 18px;
+}
+
+.journey {
+   font-size: 17px;
+   opacity: 0;
+   line-height: 2rem;
+}
+
+.p-journey {
+   margin-top: 1.7rem;
+   animation: Appearance 1.5s 1 0.3s forwards;
+}
+
+.p2-journey {
+   margin-top: 1.2rem;
+   animation: Appearance 1.5s 1 0.6s forwards;
+
+   a {
+      text-decoration: none;
+      color: darken($SECONDARY, 15%);
+      transition: all 0.3s;
+
+      &:hover {
+         color: $SECONDARY;
+      }
    }
+}
+
+.emoji-finger {
+   margin-left: 0.2rem;
+}
+.emoji-strong,
+.emoji-finger {
+   margin-left: 0.3rem;
+   font-size: 18px;
 }

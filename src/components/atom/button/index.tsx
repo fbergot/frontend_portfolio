@@ -16,7 +16,7 @@ const Button = ({ children, classButton, triggerFromParent }: ButtonProps) => {
       );
    }
    return (
-      <div onClick={() => triggerFromParent()} className={classButton}>
+      <div role="button" onClick={() => triggerFromParent()} className={classButton}>
          {children}
       </div>
    );

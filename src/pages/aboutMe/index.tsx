@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./index.scss";
 import Me from "../../assets/images/flo_bergot.jpg";
-import Button from "../../components/button";
+import Button from "../../components/atom/button";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import Emoji from "../../components/atom/emoji";
 
 const AboutMe = () => {
    const [displayJourney, setDisplayJourney] = useState(false);
@@ -18,17 +20,28 @@ const AboutMe = () => {
                   <h2>Florian Bergot</h2>
                   <div></div>
                   <p>DÉVELOPPEUR JAVASCRIPT</p>
-                  <div className="social"></div>
+                  <div className="social">
+                     <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/florian-bergot-b47b4221b"
+                     >
+                        <BsLinkedin />
+                     </a>
+                     <a rel="noreferrer" target="_blank" href="https://github.com/fbergot">
+                        <BsGithub />
+                     </a>
+                  </div>
                </div>
             </section>
             {/* right section */}
             <section>
                <div className="presentation">
                   <p>Hello !</p>
-                  <p> Quelques mots sur mon parcours ?</p>
+                  <p>Quelques mots sur mon parcours ?</p>
                   <p>
-                     Sinon, jetez directement un coup d'oeuil aux projets
-                     <span>{String.fromCodePoint(0x1f9d0)}</span>
+                     Sinon, jetez directement un coup d'oeuil aux projets.
+                     <Emoji classEmoji="emoji-glasses" codePoint={0x1f9d0} />
                   </p>
                   <div className="container-button">
                      <Button
@@ -40,14 +53,29 @@ const AboutMe = () => {
                      <Button classButton="button-colored">Voir les projets</Button>
                   </div>
                   {displayJourney && (
-                     <p className="p-journey">
-                        J'ai créé mes premiers codes en octobre 2019, et cela a été une
-                        véritable rencontre. J'ai tout de suite su que je voudrais en faire mon
-                        métier. Super, joindre l'utile à l'agréable !! J'ai donc étudié en
-                        autodidacte pendant un an et demi avant de passer un diplôme de dev web
-                        avec Openclassrooms. J'ai eu ce dernier avec les félicitations du jury
-                        en janvier 2022 {String.fromCodePoint(0x1f44c)}
-                     </p>
+                     <>
+                        <p className="p-journey journey">
+                           J'ai découvert le code en octobre 2019. Cela a été une véritable
+                           rencontre. J'ai tout de suite su que je voulais en faire mon métier.
+                           J'ai donc décidé de me reconvertir et ainsi joindre l'utile à
+                           l'agréable !
+                        </p>
+                        <p className="p2-journey journey">
+                           Par la suite, j'ai étudié en autodidacte pendant un an et demi avant
+                           de passer un diplôme de dev web avec{" "}
+                           <a
+                              target="_blank"
+                              href="https://openclassrooms.com/fr/"
+                              rel="noreferrer"
+                           >
+                              Openclassrooms
+                           </a>
+                           . En janvier 2022, j'ai obtenu ce dernier avec les félicitations du
+                           jury.
+                           <Emoji codePoint={0x1f44c} classEmoji="emoji-finger" />
+                           <Emoji codePoint={0x1f4aa} classEmoji="emoji-strong" />
+                        </p>
+                     </>
                   )}
                </div>
             </section>
