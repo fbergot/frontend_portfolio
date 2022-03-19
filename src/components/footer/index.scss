@@ -1,0 +1,103 @@
+@import "../../assets/scss/variables/colors";
+
+$paddingLeftRight: 0.5rem;
+
+footer {
+   p {
+      padding: 0.5rem;
+   }
+   //    border: 1px solid blue;
+   display: flex;
+   justify-content: space-between;
+
+   .first {
+      padding-left: $paddingLeftRight;
+      //   border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      & > p:nth-child(1) {
+         padding-top: 0.7rem;
+         margin: 0;
+      }
+      a {
+         text-decoration: none;
+         color: #000;
+         margin-top: 0.5rem;
+         transition: all 0.3s;
+      }
+
+      a:hover {
+         color: $SECONDARY;
+      }
+
+      .container-copyright {
+         padding-top: 0;
+         display: flex;
+         p {
+            padding-left: 0.2rem;
+         }
+      }
+      .copyright {
+         margin-top: 0.65rem;
+         text-decoration: none;
+      }
+   }
+
+   .second {
+      padding-right: $paddingLeftRight;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+
+      .content-tel {
+         p:nth-child(1) {
+            font-weight: bold;
+         }
+      }
+
+      .content-email {
+         p:nth-child(1) {
+            font-weight: bold;
+         }
+         a {
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s;
+
+            &:hover {
+               color: $SECONDARY;
+            }
+         }
+      }
+
+      .content-icons {
+         p:nth-child(1) {
+            font-weight: bold;
+         }
+
+         .content-icons-inline {
+            display: flex;
+            align-items: space-around;
+            justify-content: space-around;
+         }
+
+         .inline-icons {
+            color: #000;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+         }
+         .inline-icons:hover {
+            color: $SECONDARY;
+         }
+      }
+
+      .label-footer {
+         text-align: center;
+      }
+   }
+}

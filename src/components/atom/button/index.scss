@@ -16,9 +16,9 @@
 }
 
 .button-colored {
-   @include button(#fff, $SECONDARY);
+   @include button(#fff, $SECONDARY, 600);
 }
 
 .button {
-   @include button(#000, "none");
+   @include button(#000, "none", 600);
 }
