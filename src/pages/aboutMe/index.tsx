@@ -40,7 +40,7 @@ const AboutMe = () => {
                   <p>Hello !</p>
                   <p>Quelques mots sur mon parcours ?</p>
                   <p>
-                     Sinon, jetez directement un coup d'œuil aux projets.
+                     Sinon, jetez directement un coup d'œuil aux projets
                      <Emoji classEmoji="emoji-glasses" codePoint={0x1f9d0} />
                   </p>
                   <div className="container-button">
@@ -93,16 +93,17 @@ const AboutMe = () => {
                            Dès mes débuts, j'ai adoré le Javascript, mais j'ai voulu aussi
                            découvrir d'autres langages comme PHP et Python. Après cette
                            découverte, je suis revenu vers le JS pour en faire ma spécialité.
-                           C'est mon grand amour <Emoji classEmoji="" codePoint={0x1f602} />
+                           C'est mon grand amour{" "}
+                           <Emoji classEmoji="love-js" codePoint={0x1f602} />
                            bien que j'aime aussi utiliser Typescript.
                         </p>
 
                         <p className="p6-journey journey">
-                           <span>Côté Front:</span> bien-sûr HTML, CSS/SASS et Javascript.
-                           J'utilise Webpack pour le bundle et React est le framework que
-                           j'affectionne, je peux utiliser Redux comme state manager. Pour des
-                           graphiques, je peux utiliser l'API Canvas ou Chart.js par exemple.
-                           Pour les tests j'utilise Jest.
+                           <span>Côté Front:</span> bien-sûr HTML, CSS/SASS. J'utilise Webpack
+                           pour le bundle et React est le framework que j'affectionne, je peux
+                           utiliser Redux comme state manager. Pour des graphiques, je peux
+                           utiliser l'API Canvas ou Chart.js par exemple. Pour les tests
+                           j'utilise Jest.
                         </p>
 
                         <p className="p7-journey journey">
@@ -112,9 +113,10 @@ const AboutMe = () => {
                         </p>
 
                         <p className="p8-journey journey">
-                           La liste n'est sont pas exhaustive et est en constante évolution.
-                           Les technologies du web évoluent très vite et il faut être très
-                           curieux et attentif à leurs changements afin de rester dans le coup.
+                           La liste n'est pas exhaustive et est en constante évolution. Les
+                           technologies du web évoluent très vite et il faut être très curieux
+                           et attentif à leurs changements afin de rester dans le coup. Je
+                           m'intéresse aussi à Docker ainsi qu'au CI/CD depuis peu.
                         </p>
                      </div>
                   )}

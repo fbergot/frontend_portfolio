@@ -17,19 +17,19 @@ $margLeftRight: 2.5rem;
       width: 50%;
       display: flex;
       align-items: center;
+
+      .logo {
+         margin-top: 0rem;
+         width: 1.2rem;
+         height: 1.2rem;
+         background-color: $SECONDARY;
+      }
    }
 
    .nav-division {
       justify-content: end;
       margin-right: $margLeftRight;
    }
-}
-
-.cube {
-   width: 1.2rem;
-   height: 1.2rem;
-   background-color: $SECONDARY;
-   margin-top: 0.05rem;
 }
 
 .name {

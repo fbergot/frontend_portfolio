@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 const Footer = () => {
    return (
       <footer>
-         <div className="first">
+         <div className="first-cont">
             <p>
                <Link to="termsOfUse">Conditions d'utilisation</Link>
             </p>
             <div className="container-copyright">
                <BiCopyright className="copyright" />
-               <p>2022 par Florian Bergot</p>
+               <p className="font-weight">2022 par Florian Bergot</p>
             </div>
          </div>
-         <div className="second">
+         <div className="second-cont">
             <div className="content-tel">
                <p className="label-footer">Tel</p>
-               <p>06 46 38 14 08</p>
+               <p className="font-weight">06 46 38 14 08</p>
             </div>
             <div className="content-email">
                <p className="label-footer">E-mail</p>
@@ -37,7 +37,7 @@ const Footer = () => {
                      <BsLinkedin className="inline-icons" />
                   </a>{" "}
                   <a href="https://github.com/fbergot" target="_blank" rel="noreferrer">
-                     <BsGithub className="inline-icons" />
+                     <BsGithub className="inline-icons github" />
                   </a>
                </p>
             </div>

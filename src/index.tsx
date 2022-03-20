@@ -5,8 +5,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutMe from "./pages/aboutMe";
 import Projects from "./pages/projects";
 import Project from "./pages/project";
-import Header from "./components/header/Header";
-import Footer from "./components/footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import TermsOfUse from "./pages/termsOfUse";
 
 const rootElement = document.getElementById("root");

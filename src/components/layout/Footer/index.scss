@@ -1,4 +1,4 @@
-@import "../../assets/scss/variables/colors";
+@import "../../../assets/scss/variables/colors";
 
 $paddingLeftRight: 0.5rem;
 
@@ -10,7 +10,7 @@ footer {
    display: flex;
    justify-content: space-between;
 
-   .first {
+   .first-cont {
       padding-left: $paddingLeftRight;
       //   border: 1px solid red;
       display: flex;
@@ -18,7 +18,7 @@ footer {
       justify-content: space-around;
 
       & > p:nth-child(1) {
-         padding-top: 0.7rem;
+         padding: 0.5rem 0 0.5rem 0.05rem;
          margin: 0;
       }
       a {
@@ -45,27 +45,19 @@ footer {
       }
    }
 
-   .second {
+   .second-cont {
       padding-right: $paddingLeftRight;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 50%;
 
-      .content-tel {
-         p:nth-child(1) {
-            font-weight: bold;
-         }
-      }
-
       .content-email {
-         p:nth-child(1) {
-            font-weight: bold;
-         }
          a {
             text-decoration: none;
             color: #000;
             transition: all 0.3s;
+            font-weight: 300;
 
             &:hover {
                color: $SECONDARY;
@@ -74,14 +66,14 @@ footer {
       }
 
       .content-icons {
-         p:nth-child(1) {
-            font-weight: bold;
-         }
-
          .content-icons-inline {
             display: flex;
-            align-items: space-around;
             justify-content: space-around;
+
+            .github {
+               width: 21px;
+               height: 21px;
+            }
          }
 
          .inline-icons {
@@ -91,6 +83,7 @@ footer {
             transition: all 0.3s;
             cursor: pointer;
          }
+
          .inline-icons:hover {
             color: $SECONDARY;
          }
@@ -98,6 +91,11 @@ footer {
 
       .label-footer {
          text-align: center;
+         font-weight: 600;
       }
    }
+}
+
+.font-weight {
+   font-weight: 300;
 }

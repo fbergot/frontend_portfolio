@@ -129,6 +129,7 @@ main {
 
 .emoji-glasses {
    margin-left: 0.3rem;
+   margin-right: 0.25rem;
    font-size: 18px;
 }
 
@@ -137,10 +138,11 @@ main {
 .content-journey {
    margin-top: 0.5rem;
    padding-right: 0.5rem;
-   max-height: 360px;
-   overflow-y: scroll;
+   height: 360px;
    padding-bottom: 0.5rem;
+   overflow-y: scroll;
 }
+
 .journey {
    font-size: 17px;
    opacity: 0;
@@ -149,50 +151,58 @@ main {
 }
 
 .p-journey {
-   margin-top: 1.7rem;
-   animation: textAppearance 1.5s 1 0.3s forwards;
+   margin-top: 1.2rem;
+   opacity: 1;
 }
 
 $marginTop_journey: 1.2rem;
 
 .p2-journey {
    margin-top: $marginTop_journey;
-   animation: textAppearance 1.5s 1 0.6s forwards;
+   animation: textAppearance 1.5s 1 0.3s forwards;
 
    a {
       text-decoration: none;
       color: $SECONDARY;
       transition: all 0.3s;
+      font-weight: 500;
 
       &:hover {
+         color: darken($SECONDARY, 8%);
       }
    }
 }
 
 .p3-journey {
    margin-top: $marginTop_journey;
-   animation: textAppearance 1.5s 1 0.9s forwards;
+   animation: textAppearance 1.5s 1 0.6s forwards;
 }
 
 .p4-journey {
    margin-top: $marginTop_journey;
-   animation: textAppearance 1.5s 1 1.2s forwards;
+   animation: textAppearance 1.5s 1 0.9s forwards;
 }
 
 .h3-fav-technos {
    margin-top: $marginTop_journey;
    text-align: center;
    font-weight: 500;
+   opacity: 0;
+   animation: textAppearance 1.5s 1 1.2s forwards;
 }
 
 .p5-journey {
    margin-top: $marginTop_journey;
-   opacity: 1;
+   animation: textAppearance 1.5s 1 1.2s forwards;
+}
+
+.love-js {
+   margin-right: 0.2rem;
 }
 
 .p6-journey {
+   animation: textAppearance 1.5s 1 1.5s forwards;
    margin-top: $marginTop_journey;
-   opacity: 1;
 
    span {
       font-weight: 500;
@@ -201,7 +211,7 @@ $marginTop_journey: 1.2rem;
 
 .p7-journey {
    margin-top: $marginTop_journey;
-   opacity: 1;
+   animation: textAppearance 1.5s 1 1.8s forwards;
 
    span {
       font-weight: 500;
@@ -209,8 +219,8 @@ $marginTop_journey: 1.2rem;
 }
 
 .p8-journey {
+   animation: textAppearance 1.5s 1 2.1s forwards;
    margin-top: $marginTop_journey;
-   opacity: 1;
 }
 
 .emoji-finger {

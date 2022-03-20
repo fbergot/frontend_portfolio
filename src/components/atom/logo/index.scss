@@ -1,0 +1,9 @@
+@import "../../../assets/scss/variables/colors";
+
+.container {
+   display: flex;
+
+   .logo {
+      background-color: $SECONDARY;
+   }
+}
