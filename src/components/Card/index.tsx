@@ -11,10 +11,14 @@ type CardProps = {
 const Card = ({ id, imgURL, name, creationDate }: CardProps) => {
    return (
       <article className="card">
-         <Link to={`/project/${id}`}>
-            <img src={imgURL} alt={name} />
-            <h2>{name}</h2>
-            <p>Créé le {creationDate}</p>
+         <Link title={`Description du projet ${name}`} to={`/project/${id}`}>
+            <div className="container-img">
+               <img src={imgURL} alt={name} />
+            </div>
+            <div className="title-card-container">
+               <h2>{name}</h2>
+               <p>Créé le {creationDate}</p>
+            </div>
          </Link>
       </article>
    );
