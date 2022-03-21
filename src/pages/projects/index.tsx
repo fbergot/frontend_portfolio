@@ -5,23 +5,21 @@ import Logo from "../../components/atom/logo";
 
 const Projects = () => {
    return (
-      <main>
+      <main className="main">
          <div>
-            <div className="containerTitleLogo">
-               <Logo className="logoTitle" />
-               <h1 className="title">Mes projets</h1>
-            </div>
-            <p className="description">Description ...</p>
+            <Logo className="logoTitle" />
+            <h1 className="title">Projets</h1>
          </div>
-         <div className="container">
-            <div className="cardsContainer">
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-               <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
-            </div>
+         <div className="cardsContainer">
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
+            <Card id="25" imgURL={Image} name="Projet 1" creationDate="15 décembre" />
          </div>
       </main>
    );
