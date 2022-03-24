@@ -5,10 +5,10 @@ type CardProps = {
    id: string;
    imgURL: string;
    name: string;
-   creationDate: string;
+   from: string;
 };
 
-const Card = ({ id, imgURL, name, creationDate }: CardProps) => {
+const Card = ({ id, imgURL, name, from }: CardProps) => {
    return (
       <article className="card">
          <Link title={`Description du projet ${name}`} to={`/project/${id}`}>
@@ -17,7 +17,7 @@ const Card = ({ id, imgURL, name, creationDate }: CardProps) => {
             </div>
             <div className="title-card-container">
                <h2>{name}</h2>
-               <p>Créé le {creationDate}</p>
+               <p>Créé il y a {from}</p>
             </div>
          </Link>
       </article>
