@@ -9,30 +9,32 @@ const Projects = () => {
    const URL_projects = "http://localhost:3000/api/project/all";
    const [data, isLoading, error] = useFetch(URL_projects);
 
+   momentLoc();
+
    if (error) {
       return <p>Une erreur est survenue</p>;
    }
 
-   momentLoc();
-
    return (
       <main className="main">
-         <ChildrenOrLoader isLoading={isLoading}>
-            <div className="cardsContainer">
-               {data &&
-                  data.map((project) => {
-                     return (
-                        <Card
-                           key={project._id}
-                           id={project._id}
-                           imgURL={project.imgURL}
-                           name={project.name}
-                           from={moment(project.creationDate).fromNow()}
-                        />
-                     );
-                  })}
-            </div>
-         </ChildrenOrLoader>
+         <div className="cardsContainer">
+            <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
+               <>
+                  {data &&
+                     data.map((project) => {
+                        return (
+                           <Card
+                              key={project._id}
+                              id={project._id}
+                              imgURL={project.imgURL}
+                              name={project.name}
+                              from={moment(project.creationDate).fromNow(true)}
+                           />
+                        );
+                     })}
+               </>
+            </ChildrenOrLoader>
+         </div>
       </main>
    );
 };

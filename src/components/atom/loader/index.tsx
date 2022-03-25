@@ -1,7 +1,11 @@
 import "./index.scss";
 
-const Loader = () => {
-   return <div className="loader"></div>;
+type Loaderprops = {
+   loaderClass: string;
+};
+
+const Loader = ({ loaderClass }: Loaderprops) => {
+   return <div className={loaderClass}></div>;
 };
 
 export default Loader;

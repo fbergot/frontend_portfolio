@@ -1,10 +1,10 @@
 @import "../../../assets/scss/variables/colors";
 
-.loader {
-   padding: 10px;
+.loader-projects {
+   padding: 20px;
    border: 6px solid $SECONDARY;
    border-bottom-color: transparent;
-   border-radius: 22px;
+   border-radius: 3rem;
    animation: Rotate 1s infinite linear;
    height: 0;
    width: 0;

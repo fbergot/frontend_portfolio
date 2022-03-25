@@ -8,6 +8,7 @@ import Project from "./pages/project";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import TermsOfUse from "./pages/termsOfUse";
+import Contact from "./pages/contact";
 
 const rootElement = document.getElementById("root");
 
@@ -19,7 +20,8 @@ ReactDOM.render(
             <Route path="/" element={<AboutMe />} />
             <Route path="projects" element={<Projects />} />
             <Route path="project/:id" element={<Project />} />
-            <Route path="termsOrUse" element={<TermsOfUse />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="termsOfUse" element={<TermsOfUse />} />
             <Route path="*" element={<AboutMe />} />
          </Routes>
          <Footer />
