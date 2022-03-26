@@ -11,15 +11,12 @@ const Projects = () => {
 
    momentLoc();
 
-   if (error) {
-      return <p>Une erreur est survenue</p>;
-   }
-
    return (
       <main className="main">
          <div className="cardsContainer">
             <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
                <>
+                  {error && <p>Une erreur est survenue: {error}</p>}
                   {data &&
                      data.map((project) => {
                         return (

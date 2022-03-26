@@ -9,12 +9,12 @@ function Project() {
    const URL_project = `http://localhost:3000/api/project/one/${id}`;
    const [data, isLoading, error] = useFetch(URL_project);
 
-   if (data) console.log(data);
    return (
       <main className="main">
          <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
-            {data && (
-               <>
+            <>
+               {error && <p>Une erreur est survenue: {error}</p>}
+               {data && (
                   <div className="container">
                      <div className="imgSection">
                         <img src={data[0].imgURL} alt={`projet ${data[0].name}`} />
@@ -22,10 +22,11 @@ function Project() {
                      <div className="descriptionSection">
                         <h2>{data[0].name}</h2>
                         <div className="line"></div>
+                        <p>{data[0].description}</p>
                      </div>
                   </div>
-               </>
-            )}
+               )}
+            </>
          </ChildrenOrLoader>
       </main>
    );

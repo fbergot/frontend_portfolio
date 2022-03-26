@@ -14,11 +14,11 @@ interface ProjectData {
 
 type Projects = ProjectData[];
 
-type FetchReturn = [Projects, boolean, boolean];
+type FetchReturn = [Projects, boolean, string];
 
 const useFetch = (url: string, options?: RequestInit): FetchReturn => {
    const [data, setData] = useState(null);
-   const [error, setError] = useState(false);
+   const [error, setError] = useState("");
    const [isLoading, setIsLoading] = useState(true);
 
    const abortController = useRef(new AbortController());
@@ -37,13 +37,11 @@ const useFetch = (url: string, options?: RequestInit): FetchReturn => {
                projects = await response.json();
                setData(projects);
             } else {
-               console.error(`This is a HTTP error: status code: ${response.status}`);
-               setError(true);
+               setError(`HTTP error: ${response.status}`);
             }
          } catch (err) {
             if (!(err instanceof DOMException && err.code === err.ABORT_ERR)) {
-               console.error(err);
-               setError(true);
+               setError(err.message);
             }
          } finally {
             setData(projects);
