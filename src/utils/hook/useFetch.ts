@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 interface ProjectData {
    _id: string;
@@ -23,9 +23,8 @@ const useFetch = (url: string, options?: RequestInit): FetchReturn => {
 
    const abortController = useRef(new AbortController());
 
-   useEffect(() => {
-      const AbortContolCurr = abortController.current;
-      (async function fetchData() {
+   const fetchData = useCallback(
+      async function () {
          try {
             const response = await fetch(url, {
                ...options,
@@ -50,10 +49,17 @@ const useFetch = (url: string, options?: RequestInit): FetchReturn => {
             setData(projects);
             setIsLoading(false);
          }
-      })();
+      },
+      [options, url]
+   );
+
+   useEffect(() => {
+      const AbortContolCurr = abortController.current;
+      fetchData();
       // cleanup: abort fetch
       return () => AbortContolCurr.abort();
-   }, [url, options]);
+   }, [fetchData, url, options]);
+
    return [data, isLoading, error];
 };
 

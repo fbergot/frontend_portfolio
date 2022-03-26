@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "./index.scss";
 import Me from "../../assets/images/florian_bergot-min.png";
 import Button from "../../components/atom/button";
@@ -7,13 +7,13 @@ import Emoji from "../../components/atom/emoji";
 
 const AboutMe = () => {
    const [displayJourney, setDisplayJourney] = useState(false);
-   const toggleDisplayJourney = () => {
+   const toggleDisplayJourney = useCallback((displayJourney: boolean) => {
       setDisplayJourney(!displayJourney);
-   };
+   }, []);
    return (
       <main>
          <div className="wrapper-sections">
-            {/* left section */}
+            {/* first */}
             <section>
                <div className="card-presentation">
                   <img src={Me} alt="florian bergot" />
@@ -34,7 +34,7 @@ const AboutMe = () => {
                   </div>
                </div>
             </section>
-            {/* right section */}
+            {/* second*/}
             <section>
                <div className="presentation">
                   <p>Hello !</p>
@@ -45,7 +45,7 @@ const AboutMe = () => {
                   </p>
                   <div className="container-button">
                      <Button
-                        triggerFromParent={toggleDisplayJourney}
+                        triggerFromParent={() => toggleDisplayJourney(displayJourney)}
                         classButton="button first"
                      >
                         Mon parcours
