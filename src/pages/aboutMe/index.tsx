@@ -50,7 +50,9 @@ const AboutMe = () => {
                      >
                         Mon parcours
                      </Button>
-                     <Button classButton="button-colored">Voir mes projets</Button>
+                     <Button to="/projects" classButton="button-colored">
+                        Voir mes projets
+                     </Button>
                   </div>
                   {displayJourney && (
                      <div className="content-journey">
@@ -99,7 +101,7 @@ const AboutMe = () => {
                         </p>
 
                         <p className="p6-journey journey">
-                           <span>Côté Front:</span> bien-sûr HTML, CSS/SASS. J'utilise Webpack
+                           <span>Côté Front:</span> Bien-sûr HTML, CSS/SASS. J'utilise Webpack
                            pour le bundle et React est le framework que j'affectionne, je peux
                            utiliser Redux comme state manager. Pour des graphiques, je peux
                            utiliser l'API Canvas ou Chart.js par exemple. Pour les tests
