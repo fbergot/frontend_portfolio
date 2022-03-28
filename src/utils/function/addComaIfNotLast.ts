@@ -1,7 +1,4 @@
-/**
- * Add coma on all elements but not of last
- */
-const comaOrNot = (arrayOfString: string[]): string => {
+const addComaIfNotLast = (arrayOfString: string[]): string => {
    let stringTot = "";
 
    arrayOfString.forEach((chunk, index) => {
@@ -19,4 +16,4 @@ const comaOrNot = (arrayOfString: string[]): string => {
    return stringTot;
 };
 
-export default comaOrNot;
+export default addComaIfNotLast;
