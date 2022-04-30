@@ -3,10 +3,10 @@
    background-color: #fff;
    transition: all 0.3s;
    position: relative;
-   width: 31%;
+   width: 30.5%;
    height: 270px;
    border-radius: 1rem;
-   min-width: 350px;
+   min-width: 340px;
    box-shadow: 3px 3px 4px rgb(236, 233, 233), -3px -3px 4px rgb(236, 233, 233);
 
    a {
@@ -48,36 +48,36 @@
 }
 
 .card:hover {
-   transform: scale(1.02);
+   transform: scale(1.015);
 }
 
 // @media
 
-@media screen and (min-width: 1600px) {
-   .card {
-      height: 300px;
-   }
-}
+// @media screen and (min-width: 1600px) {
+//    .card {
+//       height: 300px;
+//    }
+// }
 
-@media screen and (max-width: 1136px) {
-   .card {
-      width: 48%;
-      min-width: 330px;
-      height: 240px;
-   }
-}
+// @media screen and (max-width: 1136px) {
+//    .card {
+//       width: 48%;
+//       min-width: 330px;
+//       height: 240px;
+//    }
+// }
 
-@media screen and (max-width: 764px) {
-   .card {
-      width: 98%;
-      min-width: 320px;
-   }
-}
+// @media screen and (max-width: 764px) {
+//    .card {
+//       width: 98%;
+//       min-width: 320px;
+//    }
+// }
 
-@media screen and (max-width: 450px) {
-   .card {
-      width: 98%;
-      min-width: 300px;
-      height: 200px;
-   }
-}
+// @media screen and (max-width: 450px) {
+//    .card {
+//       width: 98%;
+//       min-width: 300px;
+//       height: 200px;
+//    }
+// }

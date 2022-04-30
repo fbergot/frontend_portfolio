@@ -4,7 +4,7 @@
 @import "../../assets/scss/keyframes/textAppearance";
 
 main {
-   margin-top: 120px;
+   margin-top: 80px;
 }
 
 .wrapper-sections {
@@ -198,6 +198,7 @@ $marginTop_journey: 1.2rem;
 
 .love-js {
    margin-right: 0.2rem;
+   background-color: transparent;
 }
 
 .p6-journey {
@@ -206,6 +207,9 @@ $marginTop_journey: 1.2rem;
 
    span {
       font-weight: 500;
+      background-color: lighten($PRIMARY_LIGHT, 10);
+      padding: 2px 3px;
+      border-radius: 4px;
    }
 }
 
@@ -215,11 +219,19 @@ $marginTop_journey: 1.2rem;
 
    span {
       font-weight: 500;
+      background-color: lighten($PRIMARY_LIGHT, 10);
+      padding: 2px 3px;
+      border-radius: 4px;
    }
 }
 
 .p8-journey {
-   animation: textAppearance 1.5s 1 2.1s forwards;
+   opacity: 1;
+   margin-top: $marginTop_journey;
+}
+
+.p9-journey {
+   opacity: 1;
    margin-top: $marginTop_journey;
 }
 

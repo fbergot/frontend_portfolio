@@ -73,8 +73,7 @@ const AboutMe = () => {
                               Openclassrooms
                            </a>
                            . En janvier 2022, j'ai obtenu ce dernier avec les félicitations du
-                           jury.
-                           <Emoji codePoint={0x1f44c} classEmoji="emoji-finger" />
+                           jury ! <Emoji codePoint={0x1f44c} classEmoji="emoji-finger" />
                         </p>
 
                         <p className="p3-journey journey">
@@ -84,7 +83,7 @@ const AboutMe = () => {
                         </p>
 
                         <p className="p4-journey journey">
-                           Avec le temps, j'accumule de nombreuses connaissances, sur les
+                           Avec le temps, j'ai accumulé de nombreuses connaissances, sur les
                            langages eux mêmes ainsi que sur leurs écosystèmes. J'aime
                            travailler autant sur le frontend que sur le backend.
                         </p>
@@ -94,31 +93,48 @@ const AboutMe = () => {
                         <p className="p5-journey journey">
                            Dès mes débuts, j'ai adoré le Javascript, mais j'ai voulu aussi
                            découvrir d'autres langages comme PHP et Python. Après cette
-                           découverte, je suis revenu vers le JS pour en faire ma spécialité.
-                           C'est mon grand amour{" "}
-                           <Emoji classEmoji="love-js" codePoint={0x1f602} />
+                           découverte, je suis revenu vers le JS pour en faire ma spécialité et
+                           apprendre le langage en profondeur. C'est mon grand amour{" "}
+                           <Emoji classEmoji="love-js" codePoint={0x1f60d} />
                            bien que j'aime aussi utiliser Typescript.
                         </p>
 
                         <p className="p6-journey journey">
-                           <span>Côté Front:</span> Bien-sûr HTML, CSS/SASS. J'utilise Webpack
+                           <span>Côté Front</span>: Bien-sûr HTML, CSS/SASS. J'utilise Webpack
                            pour le bundle et React est le framework que j'affectionne, je peux
                            utiliser Redux comme state manager. Pour des graphiques, je peux
-                           utiliser l'API Canvas ou Chart.js par exemple. Pour les tests
-                           j'utilise Jest.
+                           utiliser l'API Canvas ou Chart.js par exemple. Pour tester mon code,
+                           j'utilise la librairie de test Jest. Il est à noter aussi que j'ai
+                           de bonnes notion en SEO, en optimisation ainsi qu'en accessibilité.
                         </p>
 
                         <p className="p7-journey journey">
-                           <span>Côté Back:</span> Node.js pour le serveur et express est quand
-                           même ultra simpa. Pour stocker les données, pour le no-SQL c'est
-                           MongoDB sinon, c'est MySQL. J'aime aussi l'ORM Sequelize.
+                           <span>Côté Back</span>: Je sais créer des API et des serveurs en
+                           utilsant Node.js et express et en appliquant les bonnes pratiques en
+                           termes de sécurité. Pour stocker les données, pour le no-SQL c'est
+                           MongoDB sinon, c'est MySQL. J'aime aussi utiliser l'ORM Sequelize
+                           pour faciliter les intéractions avec la BD. Comme je l'ai mentionné
+                           plus haut, j'ai aussi des notions de PHP car j'ai codé avec ce
+                           langage pendant quelques mois lors mes débuts. Dans un autre
+                           registre, je m'intéresse aussi à Docker, au CI/CD et même au
+                           software crafmanship depuis peu{" "}
+                           <Emoji classEmoji="love-js" codePoint={0x1f609} />
                         </p>
 
                         <p className="p8-journey journey">
                            La liste n'est pas exhaustive et est en constante évolution. Les
                            technologies du web évoluent très vite et il faut être très curieux
-                           et attentif à leurs changements afin de rester dans le coup. Je
-                           m'intéresse aussi à Docker ainsi qu'au CI/CD depuis peu.
+                           et attentif à leurs changements afin de rester dans le coup.
+                        </p>
+
+                        <p className="p9-journey journey">
+                           Sinon, je veux vous parler de ce que j'aime faire pour le plaisir:
+                           coder des petits jeux en JS. Comme vous pouvez le constater dans
+                           l'onglet de mes projets, j'en ai créé plusieurs, dans de différents
+                           styles et c'est à chaque fois autant un plaisir à coder que cela me
+                           fait travailler mon code. En effet, les jeux sont des très bons
+                           moyens de s'améliorer par la pratique. Du coup je join l'utile à
+                           l'agréable !!
                         </p>
                      </div>
                   )}

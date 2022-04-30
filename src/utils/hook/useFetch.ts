@@ -4,6 +4,7 @@ interface ProjectData {
    _id: string;
    name: string;
    imgURL: string;
+   otherImg: string[];
    description: string;
    components: string[];
    linkToProject?: string;

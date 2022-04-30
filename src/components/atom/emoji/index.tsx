@@ -4,7 +4,7 @@ type EmojiProps = {
 };
 
 const Emoji = ({ classEmoji, codePoint }: EmojiProps) => {
-   return <span className={classEmoji}>{String.fromCodePoint(codePoint)}</span>;
+   return <b className={classEmoji}>{String.fromCodePoint(codePoint)}</b>;
 };
 
 export default Emoji;

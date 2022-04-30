@@ -2,14 +2,11 @@ import "./index.scss";
 import Card from "../../components/Card";
 import useFetch from "../../utils/hook/useFetch";
 import ChildrenOrLoader from "../../components/ChildrenOrLoader";
-import moment from "moment";
-import momentLoc from "../../utils/moment";
+import { fromNowFormat } from "../../utils/function/utils";
 
 const Projects = () => {
    const URL_projects = "http://localhost:3000/api/project/all";
    const [data, isLoading, error] = useFetch(URL_projects);
-
-   momentLoc();
 
    return (
       <main className="main">
@@ -25,7 +22,7 @@ const Projects = () => {
                               id={project._id}
                               imgURL={project.imgURL}
                               name={project.name}
-                              from={moment(project.creationDate).fromNow(true)}
+                              from={fromNowFormat(project.creationDate)}
                            />
                         );
                      })}

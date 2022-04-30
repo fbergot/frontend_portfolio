@@ -4,12 +4,14 @@ $percentDarkenAndLighten: 6%;
    @if ($colorBackground == "none") {
       border: 1px solid black;
       &:hover {
+         transform: translateY(-1px);
          background-color: darken(#fff, $percentDarkenAndLighten);
          color: lighten($colorText, $percentDarkenAndLighten);
       }
       cursor: pointer;
    } @else {
       &:hover {
+         transform: translateY(-1px);
          background-color: lighten($colorBackground, $percentDarkenAndLighten);
          color: darken($colorText, $percentDarkenAndLighten);
       }
