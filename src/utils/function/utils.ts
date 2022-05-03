@@ -10,3 +10,29 @@ export const dateFormated = (date: Date, format: string) => {
    momentLoc();
    return moment(date).format(format);
 };
+
+export const getLocalStorageItem = (key: string): string | null => {
+   const strItem = window.localStorage.getItem(key);
+   let item = "";
+
+   try {
+      if (strItem) {
+         item = JSON.parse(strItem);
+      } else {
+         item = null;
+      }
+   } catch (err) {
+      console.error(err);
+   } finally {
+      return item;
+   }
+};
+
+export const setItemInLocalStorage = (key: string, value: any) => {
+   try {
+      const strItem = JSON.stringify(value);
+      window.localStorage.setItem(key, strItem);
+   } catch (err) {
+      console.error(err);
+   }
+};

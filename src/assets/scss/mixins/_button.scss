@@ -4,14 +4,14 @@ $percentDarkenAndLighten: 6%;
    @if ($colorBackground == "none") {
       border: 1px solid black;
       &:hover {
-         transform: translateY(-1px);
+         transform: translateY(-2px);
          background-color: darken(#fff, $percentDarkenAndLighten);
          color: lighten($colorText, $percentDarkenAndLighten);
       }
       cursor: pointer;
    } @else {
       &:hover {
-         transform: translateY(-1px);
+         transform: translateY(-2px);
          background-color: lighten($colorBackground, $percentDarkenAndLighten);
          color: darken($colorText, $percentDarkenAndLighten);
       }
@@ -26,7 +26,7 @@ $percentDarkenAndLighten: 6%;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 0.5rem 1rem;
+   padding: 0.3rem 0.9rem;
    margin-bottom: 0.1rem;
    font-weight: $font_weight;
    transition: all 0.3s;
