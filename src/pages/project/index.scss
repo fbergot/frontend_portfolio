@@ -179,8 +179,21 @@
    position: absolute;
    top: 2rem;
    left: 3rem;
+   transition: all 0.3s;
+
    span {
       margin: 0.2rem 0.5rem 0 0;
+   }
+}
+
+.back:hover {
+   color: $SECONDARY;
+   span {
+      transform: translateX(-3px);
+   }
+
+   a {
+      color: inherit;
    }
 }
 
