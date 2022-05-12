@@ -44,20 +44,7 @@ function Project() {
                         <section className="cont-imgSection-descSection">
                            <div className="imgSection">
                               <img src={data[0].imgURL} alt={`projet ${data[0].name}`} />
-                              {data[0].linkToProject && (
-                                 <div className="cont-link">
-                                    <Button classButton="button-colored">
-                                       <a
-                                          className="colored-link"
-                                          href={data[0].linkToProject}
-                                          target="_blank"
-                                          rel="noreferrer"
-                                       >
-                                          Voir le projet
-                                       </a>
-                                    </Button>
-                                 </div>
-                              )}
+
                               {/* <img src={data[0].otherImg[0]} alt={`projet ${data[0].name}`} /> */}
                            </div>
 
@@ -80,21 +67,38 @@ function Project() {
                                     <p className="technos">{techosFormated}</p>
                                  </div>
                               </div>
-                              {data[0].linkToGithub && (
-                                 <div className="cont-link">
-                                    <Button classButton="button">
-                                       <a
-                                          className="white-link"
-                                          href={data[0].linkToGithub}
-                                          target="_blank"
-                                          rel="noreferrer"
-                                       >
-                                          Voir le code sur Github
-                                       </a>
-                                    </Button>
-                                 </div>
-                              )}
                            </div>
+                        </section>
+                        <section className="but-section">
+                           {data[0].linkToGithub && (
+                              <div className="cont-link">
+                                 <Button classButton="button">
+                                    <a
+                                       className="white-link"
+                                       href={data[0].linkToGithub}
+                                       target="_blank"
+                                       rel="noreferrer"
+                                    >
+                                       Voir le code sur Github
+                                    </a>
+                                 </Button>
+                              </div>
+                           )}
+
+                           {data[0].linkToProject && (
+                              <div className="cont-link">
+                                 <Button classButton="button-colored">
+                                    <a
+                                       className="colored-link"
+                                       href={data[0].linkToProject}
+                                       target="_blank"
+                                       rel="noreferrer"
+                                    >
+                                       Voir le projet hébergé
+                                    </a>
+                                 </Button>
+                              </div>
+                           )}
                         </section>
                      </div>
                   </>
