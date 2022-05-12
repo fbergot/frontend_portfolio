@@ -16,11 +16,7 @@ export const getLocalStorageItem = (key: string): string | null => {
    let item = "";
 
    try {
-      if (strItem) {
-         item = JSON.parse(strItem);
-      } else {
-         item = null;
-      }
+      item = strItem ? JSON.parse(strItem) : null;
    } catch (err) {
       console.error(err);
    } finally {

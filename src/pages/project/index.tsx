@@ -62,7 +62,7 @@ function Project() {
                                        <span className="icon-technos">
                                           <GrTechnology />
                                        </span>
-                                       <h3>Technos / skills utilisés:</h3>
+                                       <h3>Technos / Skills utilisés:</h3>
                                     </div>
                                     <p className="technos">{techosFormated}</p>
                                  </div>

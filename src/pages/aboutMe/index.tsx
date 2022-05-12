@@ -59,7 +59,7 @@ const AboutMe = () => {
                         <p className="p-journey journey">
                            J'ai découvert le code en octobre 2019. Cela a été une véritable
                            rencontre. J'ai tout de suite su que je voulais en faire mon métier.
-                           J'ai donc décidé de me reconvertir et j'ai travaillé dûr pour cela.
+                           J'ai donc décidé de me reconvertir et j'ai travaillé dur pour cela.
                         </p>
 
                         <p className="p2-journey journey">
@@ -96,7 +96,8 @@ const AboutMe = () => {
                            découverte, je suis revenu vers le JS pour en faire ma spécialité et
                            apprendre le langage en profondeur. C'est mon grand amour{" "}
                            <Emoji classEmoji="love-js" codePoint={0x1f60d} />
-                           bien que j'aime aussi utiliser Typescript.
+                           bien que j'aime aussi utiliser Typescript (le portfolio et son API
+                           son codés avec)
                         </p>
 
                         <p className="p6-journey journey">

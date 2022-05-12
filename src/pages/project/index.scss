@@ -12,6 +12,7 @@
       font-family: $LATO;
       font-weight: 500;
       margin: 1.5rem auto 0.5rem auto;
+      font-size: 3rem;
    }
 }
 
@@ -22,9 +23,9 @@
    // border-bottom: 2px solid $SECONDARY;
 
    .project-icon {
-      font-size: 1.5rem;
-      margin-right: 1.2rem;
-      margin-top: 2rem;
+      font-size: 2rem;
+      margin-right: 1rem;
+      margin-top: 2.4rem;
       animation: ic_rotate 2s 1 forwards;
       transform: rotate(45deg);
    }
@@ -204,8 +205,7 @@
 }
 
 .but-section {
-   margin-top: 2rem;
-   border: 1px solid gray;
+   margin: 1rem;
    display: flex;
    justify-content: space-around;
 }
