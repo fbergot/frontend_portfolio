@@ -17,11 +17,11 @@ ReactDOM.render(
       <Router>
          <Header />
          <Routes>
-            <Route path="/" element={<AboutMe />} />
             <Route path="projects" element={<Projects />} />
             <Route path="project/:id" element={<Project />} />
             <Route path="contact" element={<Contact />} />
             <Route path="termsOfUse" element={<TermsOfUse />} />
+            <Route path="/" element={<AboutMe />} />
             <Route path="*" element={<AboutMe />} />
          </Routes>
          <Footer />

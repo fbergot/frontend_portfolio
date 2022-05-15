@@ -3,6 +3,8 @@ import Card from "../../components/Card";
 import useFetch from "../../utils/hook/useFetch";
 import ChildrenOrLoader from "../../components/ChildrenOrLoader";
 import { fromNowFormat } from "../../utils/function/utils";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import CardProject from "../../components/Card_project";
 
 const Projects = () => {
    const URL_projects = "http://localhost:3000/api/project/all";
@@ -10,25 +12,30 @@ const Projects = () => {
 
    return (
       <main className="main">
-         <div className="cardsContainer">
-            <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
-               <>
-                  { !error ? data &&
-                     data.map((project) => {
-                        return (
-                           <Card
-                              key={project._id}
-                              id={project._id}
-                              imgURL={project.imgURL}
-                              name={project.name}
-                              from={fromNowFormat(project.creationDate)}
-                           />
-                        );
-                     }) : error && <p>Une erreur est survenue: {error}</p>
-                  }
-               </>
-            </ChildrenOrLoader>
-         </div>
+         <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
+            <div className="wrapper-sections2">
+               <section>
+                  <div className="cont-proj">
+                     {/* first */}
+                     {!error ? (
+                        data &&
+                        data.map((project) => {
+                           return (
+                              <CardProject
+                                 key={project._id}
+                                 img={project.imgURL}
+                                 name={project.name}
+                                 date={project.creationDate}
+                              />
+                           );
+                        })
+                     ) : (
+                        <p>Une erreur est survenue</p>
+                     )}
+                  </div>
+               </section>
+            </div>
+         </ChildrenOrLoader>
       </main>
    );
 };
