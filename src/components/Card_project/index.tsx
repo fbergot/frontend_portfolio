@@ -5,14 +5,16 @@ interface PropsCardProject {
    img: string;
    name: string;
    date: Date;
+   id: string;
 }
 
-function CardProject({ img, name, date }: PropsCardProject) {
-   const dateFormat = date && dateFormated(date, "MMMM YYYY");
+function CardProject({ img, name, date, id }: PropsCardProject) {
    return (
       <article className="cardProjectCont">
          <div className="cardProjectContent">
-            <img src={img} alt={name} />
+            <a href={`project/${id}`}>
+               <img src={img} alt={name} />
+            </a>
             <h2>{name}</h2>
          </div>
       </article>

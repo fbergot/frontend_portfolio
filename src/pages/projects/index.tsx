@@ -26,6 +26,7 @@ const Projects = () => {
                                  img={project.imgURL}
                                  name={project.name}
                                  date={project.creationDate}
+                                 id={project._id}
                               />
                            );
                         })
