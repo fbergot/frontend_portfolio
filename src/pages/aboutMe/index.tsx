@@ -3,6 +3,7 @@ import "./index.scss";
 import Me from "../../assets/images/florian_bergot-min.png";
 import Button from "../../components/atom/button";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+
 import Emoji from "../../components/atom/emoji";
 
 const AboutMe = () => {

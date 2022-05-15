@@ -3,10 +3,99 @@
 
 $columnAndRow_gap: 2vw;
 
-.main {
+.main2 {
    margin-top: 80px;
    height: auto;
    display: block;
+}
+
+.wrapper-sections {
+   display: grid;
+   grid-template-columns: 35% 65%;
+   position: block;
+
+   section {
+      height: 100vh;
+      min-height: 800px;
+   }
+
+   section:nth-child(1) {
+      background-color: $PRIMARY;
+      position: relative;
+      min-width: 390px;
+   }
+
+   section:nth-child(2) {
+      position: relative;
+   }
+}
+
+.card-presentation2 {
+   position: absolute;
+   top: 10%;
+   right: -60px;
+   width: 375px;
+   height: 520px;
+   background-color: $PRIMARY_LIGHT;
+   box-shadow: -10px 7px 14px -10px #7a7b7b;
+   display: flex;
+   align-items: center;
+
+   img {
+      border-radius: 100%;
+      width: 205px;
+      height: 205px;
+      object-fit: cover;
+      margin-top: 2.8rem;
+   }
+
+   h2 {
+      font-size: 1.8rem;
+      margin-top: 2.4rem;
+      font-family: "Poppins";
+      max-width: 160px;
+      text-align: center;
+      line-height: 30px;
+   }
+
+   div {
+      margin-top: 2.2rem;
+      width: 50px;
+      height: 2px;
+      background-color: $SECONDARY;
+   }
+
+   p {
+      margin-top: 2.2rem;
+      font-weight: 300;
+      font-size: 1.2rem;
+   }
+
+   .social {
+      width: 100%;
+      background-color: #ffffff;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      a {
+         text-decoration: none;
+         color: #000;
+         font-size: 1.5rem;
+         transition: all 0.3s;
+         margin-top: 0.35rem;
+
+         &:hover {
+            color: $SECONDARY;
+         }
+      }
+      a:nth-child(2) {
+         font-size: 1.65rem;
+      }
+   }
 }
 
 .logoTitle {

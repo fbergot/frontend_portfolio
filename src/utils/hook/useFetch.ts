@@ -43,7 +43,10 @@ const useFetch = (url: string, options?: RequestInit): FetchReturn => {
          } catch (err) {
             if (!(err instanceof DOMException && err.code === err.ABORT_ERR)) {
                setError(err.message);
+            } else {
+               console.warn(err);
             }
+            
          } finally {
             setData(projects);
             setIsLoading(false);
