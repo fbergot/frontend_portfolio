@@ -1,13 +1,11 @@
 @import "../../assets/scss/variables/colors.scss";
 
-.cardProjectCont:nth-of-type(2n) {
-   margin-left: 40%;
-}
 // .cardProjectCont:nth-of-type(3n) {
 //    margin-left: 60%;
 // }
 
 .cardProjectCont {
+   z-index: 1500;
    margin-left: 15%;
    max-width: 600px;
    height: 300px;
@@ -40,14 +38,55 @@
 
       h2 {
          border-radius: 0.3rem;
-         text-align: center;
+         text-align: left;
          font-weight: 400;
          position: absolute;
          top: -55px;
-         right: 50%;
+         left: 1rem;
          padding: 0.4rem 0.5rem 0.5rem 0.5rem;
-         transform: translateX(50%);
+         // transform: translateX(50%);
          background-color: $PRIMARY;
       }
    }
+}
+
+@for $var from 1 to 20 {
+   @if $var % 2 != 0 {
+      .cardProjectCont:nth-of-type(#{$var}n) {
+         margin-left: 15vw;
+         .line-proj {
+            width: 18vw;
+            height: 1px;
+            background-color: rgb(89, 87, 104);
+            position: absolute;
+         }
+      }
+   } @else {
+      .cardProjectCont:nth-of-type(#{$var}n) {
+         margin-left: 50vw;
+         .line-proj {
+            width: calc(12vw - 2px);
+            height: 1px;
+            background-color: rgb(89, 87, 104);
+            position: absolute;
+         }
+      }
+   }
+}
+
+.line-proj2 {
+   // transform: a(90deg);
+   width: 200px;
+   height: 3px;
+   background-color: rgb(89, 87, 104);
+   position: absolute;
+}
+
+.positionContentDate {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: space-around;
 }

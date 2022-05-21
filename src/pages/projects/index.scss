@@ -1,5 +1,6 @@
 @import "../../assets/scss/variables/colors";
 @import "../../assets/scss/variables/fonts";
+@import "../../assets/scss/variables/lists_maps";
 
 $columnAndRow_gap: 4rem;
 
@@ -11,18 +12,14 @@ main.main {
 }
 
 .cont-proj {
-   // position: absolute;
-   // top: $columnAndRow_gap;
-   // left: 20%;
-   // bottom: 0;
    margin-top: 4rem;
    display: flex;
    flex-direction: column;
    flex-wrap: nowrap;
    row-gap: $columnAndRow_gap;
-   // border: 1px solid red;
 }
 .wrapper-sections2 {
+   position: relative;
    padding-top: 2rem;
    section {
       height: auto;
@@ -30,12 +27,65 @@ main.main {
    }
 
    section:nth-child(1) {
-      // background-color: $PRIMARY;
       min-width: 390px;
    }
 }
 
-.loader-pro {
-   display: flex;
-   justify-content: center;
+@for $var from 1 to 15 {
+   @keyframes anim_proj-#{$var} {
+      0% {
+         transform: rotate(45deg) rotate(0.5turn) translateX(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 1;
+      }
+
+      20% {
+         transform: rotate(90deg) rotate(0.5turn) translateX(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 0.7;
+      }
+
+      40% {
+         transform: rotate(135deg) rotate(0.5turn) translateX(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 0.5;
+      }
+
+      60% {
+         transform: rotate(180deg) rotate(0.5turn) translateX(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 0.3;
+      }
+
+      80% {
+         transform: rotate(240deg) rotate(0.5turn) translateZ(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 0.1;
+      }
+
+      100% {
+         transform: rotate(360deg) rotate(0.5turn) translateZ(map-get($topMap, "#{$var}"));
+         width: map-get($topMap, "#{$var}");
+         opacity: 0;
+         display: none;
+      }
+   }
+}
+
+@for $var from 1 to 15 {
+   .img-tech-#{$var} {
+      position: absolute;
+      top: map-get($topMap, "#{$var}");
+      left: map-get($valuesLeft, "#{$var}");
+      right: map-get($heightValues, "#{$var}");
+      bottom: map-get($topMap, "#{$var}");
+      width: map-get($heightValues, "#{$var}");
+      height: map-get($heightValues, "#{$var}");
+      padding: 0.5rem;
+      background-color: $PRIMARY;
+      border: 2px solid $PRIMARY_LIGHT;
+      border-radius: 2rem;
+      transform: rotate(map-get($valuesLeft, "#{$var}"));
+      animation: forwards 10s 1 anim_proj-#{$var} cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   }
 }
