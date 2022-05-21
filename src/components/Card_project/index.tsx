@@ -2,6 +2,7 @@ import "./card_project.scss";
 import { dateFormated } from "../../utils/function/utils";
 import { LinkProjectStyled, ContentDateStyled } from "../../pages/projects/styled.component";
 import { useEffect, useRef, useState } from "react";
+
 interface PropsCardProject {
    img: string;
    name: string;
@@ -23,6 +24,7 @@ function CardProject({ img, name, date, id, index }: PropsCardProject) {
       setWidthX(clientX);
       setWidthY(clientY);
    }, []);
+
    return (
       <article ref={card} className="cardProjectCont">
          <div className="cardProjectContent">

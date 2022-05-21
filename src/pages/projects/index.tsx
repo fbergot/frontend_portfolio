@@ -1,11 +1,8 @@
 import "./index.scss";
 import useFetch from "../../utils/hook/useFetch";
 import ChildrenOrLoader from "../../components/ChildrenOrLoader";
-import { fromNowFormat } from "../../utils/function/utils";
 import CardProject from "../../components/Card_project";
 import ImagesTechnos from "../../assets/images/images4.jpg";
-
-import { useRef } from "react";
 
 const Projects = () => {
    const URL_projects = "http://localhost:3000/api/project/all";

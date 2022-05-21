@@ -4,7 +4,6 @@ interface ProjectData {
    _id: string;
    name: string;
    imgURL: string;
-   otherImg: string[];
    description: string;
    components: string[];
    linkToProject?: string;
@@ -46,7 +45,6 @@ const useFetch = (url: string, options?: RequestInit): FetchReturn => {
             } else {
                console.warn(err);
             }
-            
          } finally {
             setData(projects);
             setIsLoading(false);
