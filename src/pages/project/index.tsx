@@ -44,8 +44,6 @@ function Project() {
                         <section className="cont-imgSection-descSection">
                            <div className="imgSection">
                               <img src={data[0].imgURL} alt={`projet ${data[0].name}`} />
-
-                              {/* <img src={data[0].otherImg[0]} alt={`projet ${data[0].name}`} /> */}
                            </div>
 
                            <div className="descriptionSection">

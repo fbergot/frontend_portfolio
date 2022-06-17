@@ -1,12 +1,10 @@
-// import { Admin, Resource } from "react-admin";
-// import jsonServerProvider from "ra-data-json-server";
+import useFetch from "../../utils/hook/useFetch";
 
-// function AdminComp() {
-//    return (
-//       <Admin dataProvider={jsonServerProvider("http://localhost:3000/api/project/all")}>
-//          {/* <Resource name="projects" list={} /> */}
-//       </Admin>
-//    );
-// }
 
-// export default AdminComp;
+const Admin = () => {
+    return <div>
+    
+    </div>;
+};
+
+export default Admin;

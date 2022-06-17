@@ -13,19 +13,21 @@ const Projects = () => {
          <div className="cardsContainer">
             <ChildrenOrLoader isLoading={isLoading} loaderClass="loader-projects">
                <>
-                  { !error ? data &&
-                     data.map((project) => {
-                        return (
-                           <Card
-                              key={project._id}
-                              id={project._id}
-                              imgURL={project.imgURL}
-                              name={project.name}
-                              from={fromNowFormat(project.creationDate)}
-                           />
-                        );
-                     }) : error && <p>Une erreur est survenue: {error}</p>
-                  }
+                  {!error
+                     ? data &&
+                       data.map((project, index) => {
+                          return (
+                             <Card
+                                index={index}
+                                key={project._id}
+                                id={project._id}
+                                imgURL={project.imgURL}
+                                name={project.name}
+                                from={fromNowFormat(project.creationDate)}
+                             />
+                          );
+                       })
+                     : error && <p>Une erreur est survenue: {error}</p>}
                </>
             </ChildrenOrLoader>
          </div>

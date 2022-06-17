@@ -6,11 +6,12 @@ type CardProps = {
    imgURL: string;
    name: string;
    from: string;
+   index: number;
 };
 
-const Card = ({ id, imgURL, name, from }: CardProps) => {
+const Card = ({ id, imgURL, name, from, index }: CardProps) => {
    return (
-      <article className="card">
+      <article className={`card-${index}`}>
          <Link title={`Description du projet ${name}`} to={`/project/${id}`}>
             <div className="container-img">
                <img src={imgURL} alt={name} />
